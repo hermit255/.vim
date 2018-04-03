@@ -49,8 +49,8 @@ set noeol
 " ヤンク内容をクリップボードに転送　autoselectをセットすると選択範囲が優先して送られるので指定を外している
 set clipboard=unnamed
 " ヤンク内容をクリップボードに転送　linux にも対応
-command Pbcopy :let @*=@"  "最後にyank or 削除した内容をクリップボードに入れる
-command Pbcopy0 :let @*=@0 "最後にyankした内容をクリップボードに入れる
+"command Pbcopy :let @*=@"  "最後にyank or 削除した内容をクリップボードに入れる
+"command Pbcopy0 :let @*=@0 "最後にyankした内容をクリップボードに入れる
 " htmlタグの対応関係を把握可能にする
 source $VIMRUNTIME/macros/matchit.vim
 " ctags 動作用設定
