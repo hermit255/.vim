@@ -18,6 +18,7 @@ call dein#add('rking/ag.vim')
 call dein#add('scrooloose/nerdtree')
 call dein#add('scrooloose/syntastic.git')
 call dein#add('slim-template/vim-slim')
+call dein#add('cohama/agit.vim')
 "call dein#add('')
 
 " color scheme download
