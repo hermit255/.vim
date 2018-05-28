@@ -1,7 +1,7 @@
 echo " Copying .vimrc in home directory..."
 cp ~/.vim/vim_config/.vimrc ~/
 echo " Creating backup directory..."
-mkdir -p ~/.backup
+mkdir -p ~/.vim/.backup
 echo " Creating dein directory..."
 mkdir -p ~/.vim/dein/repos/github.com/Shougo/dein.vim
 echo " Cloning dein.vim..."
