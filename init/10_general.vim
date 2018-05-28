@@ -15,7 +15,7 @@ set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp,sjis
 syntax on
 set backup
-set backupdir=~/.backup/
+set backupdir=~/.vim/.backup/
 set browsedir=buffer
 set nowrap
 set tw=0
@@ -55,9 +55,6 @@ set clipboard=unnamed
 source $VIMRUNTIME/macros/matchit.vim
 " ctags 動作用設定
 set tags=./tags;
-" tキー をtagコマンドとして設定
-nnoremap    [Tag]   <Nop>
-nmap    t [Tag]
 " df で左右分割比較ができるようにする
 cnoremap df vertical diffsplit<space>
 " leaderを設定
@@ -105,6 +102,7 @@ function! s:my_tabline()  "{{{
 endfunction "}}}
 let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
 set showtabline=2 " 常にタブラインを表示
+
 " vモードの置換連続ペースト用 参考  http://qiita.com/hikaruna/items/83c1220eede810bee492
 function! Put_text_without_override_register()
   let line_len = strlen(getline('.'))
