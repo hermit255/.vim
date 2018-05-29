@@ -1,7 +1,3 @@
-" vimrc で必要十分な記述
-" set runtimepath+=~/.vim/
-" runtime! config/init/*.vim
-
 " gvimのみの設定 ウインドウを最大化
 au GUIEnter * simalt ~x
 " grep 実行時にQuickfixWindowを開く
