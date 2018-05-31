@@ -36,6 +36,7 @@ set wildmenu
 set autochdir
 set splitright
 set nowrapscan
+set t_Co=256
 " 検索語をハイライト
 set hlsearch
 " 自動改行設定を一部無効化(t, c をキャンセル)

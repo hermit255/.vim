@@ -1,2 +1,2 @@
 filetype plugin indent on
-colorscheme tender
+colorscheme badwolf
