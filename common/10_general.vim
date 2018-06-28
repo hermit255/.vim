@@ -1,15 +1,10 @@
-" gvimのみの設定 ウインドウを最大化
-au GUIEnter * simalt ~x
-" grep 実行時にQuickfixWindowを開く
-au QuickFixCmdPost *grep* cwindow
-"  slim のシンタックスハイライトを有効にさせるために必要な設定
-au BufRead,BufNewFile *.slim setfiletype slim
-au Filetype json setl conceallevel=0
+" runtimepath の問題があるので colorscheme の前に dein.vim を先に読み込むこと
+filetype plugin indent on
+colorscheme tender
 
 " 基本設定
 set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp,sjis
-syntax on
 set backup
 set backupdir=~/vim_config/.backup/
 set browsedir=buffer
@@ -42,41 +37,25 @@ set hlsearch
 set formatoptions=q
 " 保存時に自動で入る行末の改行を無効化
 set noeol
+
 " ヤンク内容をクリップボードに転送　autoselectをセットすると選択範囲が優先して送られるので指定を外している
 set clipboard=unnamed
 " ヤンク内容をクリップボードに転送　linux にも対応
 "command Pbcopy :let @*=@"  "最後にyank or 削除した内容をクリップボードに入れる
 "command Pbcopy0 :let @*=@0 "最後にyankした内容をクリップボードに入れる
 " htmlタグの対応関係を把握可能にする
+
 source $VIMRUNTIME/macros/matchit.vim
 " ctags 動作用設定
 set tags=./tags;
-" df で左右分割比較ができるようにする
-cnoremap df vertical diffsplit<space>
-" leaderを設定
-let mapleader = "\<Space>"
-" タブ移動の簡略化
-nnoremap <Leader>l :tabnext<CR>
-nnoremap <Leader>h :tabprevious<CR>
-" クオート等を補完
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap < <><LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
-inoremap ` ``<LEFT>
-vnoremap { "zdi{<C-R>z}<ESC>
-vnoremap [ "zdi[<C-R>z]<ESC>
-vnoremap ( "zdi(<C-R>z)<ESC>
-vnoremap " "zdi"<C-R>z"<ESC>
-vnoremap ' "zdi'<C-R>z'<ESC>
+
 " http://qiita.com/wadako111/items/755e753677dd72d8036dから流用
 " タブラインを表示
 " Anywhere SID.
 function! s:SID_PREFIX()
   return matchstr(expand('<sfile>'), '<SNR>\d\+_\zeSID_PREFIX$')
 endfunction
+
 " Set tabline.
 function! s:my_tabline()  "{{{
   let s = ''
@@ -112,3 +91,8 @@ function! Put_text_without_override_register()
   endif
 endfunction
 xnoremap <silent> p :call Put_text_without_override_register()<CR>
+
+" ウインドウを最大化（gvimのみの設定）
+au GUIEnter * simalt ~x
+" grep 実行時にQuickfixWindowを開く
+au QuickFixCmdPost *grep* cwindow
