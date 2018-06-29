@@ -31,6 +31,7 @@ set wildmenu
 set autochdir
 set splitright
 set nowrapscan
+set t_Co=256
 " 検索語をハイライト
 set hlsearch
 " 自動改行設定を一部無効化(t, c をキャンセル)
@@ -46,8 +47,6 @@ set clipboard=unnamed
 " htmlタグの対応関係を把握可能にする
 
 source $VIMRUNTIME/macros/matchit.vim
-" ctags 動作用設定
-set tags=./tags;
 
 " http://qiita.com/wadako111/items/755e753677dd72d8036dから流用
 " タブラインを表示
