@@ -2,12 +2,12 @@ if &compatible
  set nocompatible
 endif
 " Add the dein installation directory into runtimepath
-set runtimepath+=~/vim_config/.cache/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=$DeinPath
 
-if dein#load_state('~/vim_config/.cache/dein')
- call dein#begin('~/vim_config/.cache/dein')
+if dein#load_state($CachePath. '/dein')
+ call dein#begin($CachePath. '/dein')
 
- call dein#add('~/vim_config/.cache/dein')
+ call dein#add($CachePath. '/dein')
  call dein#add('Shougo/deoplete.nvim')
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
@@ -25,6 +25,7 @@ call dein#add('scrooloose/nerdtree')
 call dein#add('scrooloose/syntastic.git')
 call dein#add('slim-template/vim-slim')
 call dein#add('cohama/agit.vim')
+call dein#add('majutsushi/tagbar')
 "call dein#add('')
 
 " color scheme download

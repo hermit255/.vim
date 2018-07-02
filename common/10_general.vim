@@ -6,7 +6,6 @@ colorscheme tender
 set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp,sjis
 set backup
-set backupdir=~/vim_config/.backup/
 set browsedir=buffer
 set nowrap
 set tw=0
