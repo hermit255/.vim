@@ -1,9 +1,9 @@
 echo " Copying .vimrc to runtimepath..."
 cp .vimrc ../
-echo " Cloning dein.vim..."
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > ./.cache/installer.sh
+# echo " Cloning dein.vim..."
+# curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > ./.cache/installer.sh
 # For example, we just use `~/.cache/dein` as installation directory
-mkdir ./.cache ./.backup
+echo " Installing dein.vim..."
 sh ./.cache/installer.sh ./.cache/dein
 # echo "Setting vimdiff as difftool and mergetool..."
 # git config --global diff.tool vimdiff
