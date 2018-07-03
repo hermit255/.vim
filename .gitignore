@@ -1,5 +1,5 @@
 .backup/*
-!.backup
 .cache/*
-!.cache
 !.cache/installer.sh
+!.cache
+!.backup
