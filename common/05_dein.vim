@@ -29,5 +29,10 @@ if dein#load_state($WorkingPath)
   call dein#save_state()
 endif
 
+" 不足プラグインの自動インストール
+if has('vim_starting') && dein#check_install()
+  call dein#install()
+endif
+
 " colorscheme"
 colorscheme tender
