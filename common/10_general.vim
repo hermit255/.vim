@@ -1,10 +1,8 @@
-" runtimepath の問題があるので colorscheme の前に dein.vim を先に読み込むこと
-filetype plugin indent on
-colorscheme tender
-
+" colorscheme はdein設定に依存するのでここでは設定しない
 " 基本設定
 set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp,sjis
+set t_Co=256
 set backup
 set browsedir=buffer
 set nowrap
@@ -30,7 +28,6 @@ set wildmenu
 set autochdir
 set splitright
 set nowrapscan
-set t_Co=256
 " 検索語をハイライト
 set hlsearch
 " 自動改行設定を一部無効化(t, c をキャンセル)
@@ -40,11 +37,7 @@ set noeol
 
 " ヤンク内容をクリップボードに転送　autoselectをセットすると選択範囲が優先して送られるので指定を外している
 set clipboard=unnamed
-" ヤンク内容をクリップボードに転送　linux にも対応
-"command Pbcopy :let @*=@"  "最後にyank or 削除した内容をクリップボードに入れる
-"command Pbcopy0 :let @*=@0 "最後にyankした内容をクリップボードに入れる
 " htmlタグの対応関係を把握可能にする
-
 source $VIMRUNTIME/macros/matchit.vim
 
 " http://qiita.com/wadako111/items/755e753677dd72d8036dから流用
@@ -77,6 +70,7 @@ let &tabline = '%!'. s:SID_PREFIX() . 'my_tabline()'
 set showtabline=2 " 常にタブラインを表示
 
 " vモードの置換連続ペースト用 参考  http://qiita.com/hikaruna/items/83c1220eede810bee492
+" vモードで既存の文字列を選択して貼り付けると、上書きされた部分がヤンクされたことになる問題への対処
 function! Put_text_without_override_register()
   let line_len = strlen(getline('.'))
   execute "normal! `>"
@@ -90,7 +84,5 @@ function! Put_text_without_override_register()
 endfunction
 xnoremap <silent> p :call Put_text_without_override_register()<CR>
 
-" ウインドウを最大化（gvimのみの設定）
-au GUIEnter * simalt ~x
 " grep 実行時にQuickfixWindowを開く
 au QuickFixCmdPost *grep* cwindow
