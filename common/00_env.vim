@@ -1,10 +1,11 @@
-" ================================================================
+" ==================================================================================
 " OS環境などの差によって使い分けする項目
-" ================================================================
+" clipboard 機能は便利なので、linuxでは vim-gnome などGUIを備えたものがよい
+" ==================================================================================
 " ポータブル環境設定のルートディレクトリ
 let $ConfigPath = $HOME. "/vim_config/"
 " dein および dein管理プラグインのインストール先
-let $WorkingPath = $ConfigPath. ".working/"
+let $WorkingPath = $HOME. "/.cache/"
 let $GithubPath = $WorkingPath. "repos/github.com/"
 let $ShougoPath = $GithubPath. "Shougo/"
 let $DeinPath = $ShougoPath. "dein.vim/"

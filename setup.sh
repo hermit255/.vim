@@ -1,9 +1,13 @@
+cachePath="../.cache/"
+deinInstaller="https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh"
+
+mkdir $cachePath ${cachePath}.backup
 echo " Copying .vimrc to runtimepath..."
 cp .vimrc ../
 # echo " Cloning dein.vim..."
-curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > ./.working/installer.sh
+curl $deinInstaller > ${cachePath}installer.sh
 echo " Installing dein.vim..."
-sh ./.working/installer.sh ./.working/dein
+sh ${cachePath}installer.sh ${cachePath}
 # echo "Setting vimdiff as difftool and mergetool..."
 # git config --global diff.tool vimdiff
 # git config --global difftool.prompt false
