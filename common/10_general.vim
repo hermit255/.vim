@@ -36,6 +36,9 @@ set formatoptions=q
 set noeol
 " 移動不能な操作がされた場合などに出るビープ音を無効にする
 set belloff=all
+" コマンドラインモード等の<tab>補完を、共通部分までの補完→候補選択という流れにする（terminalと同じ感じ）
+set wildmenu
+set wildmode=longest:full,full
 
 " ヤンク内容をクリップボードに転送　autoselectをセットすると選択範囲が優先して送られるので指定を外している
 set clipboard=unnamed
