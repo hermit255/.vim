@@ -34,8 +34,13 @@ set hlsearch
 set formatoptions=q
 " 保存時に自動で入る行末の改行を無効化
 set noeol
-" 移動不能な操作がされた場合などに出るビープ音を無効にする
+" 移動不能な操作がされた場合などに出るbeep音を無効にする
 set belloff=all
+" beep の代わりに点滅する挙動を抑制
+set noerrorbells visualbell t_vb=
+if has('autocmd')
+  autocmd GUIEnter * set visualbell t_vb=
+endif
 " コマンドラインモード等の<tab>補完を、共通部分までの補完→候補選択という流れにする（terminalと同じ感じ）
 set wildmenu
 set wildmode=longest:full,full
