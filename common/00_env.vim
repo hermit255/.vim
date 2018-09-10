@@ -22,6 +22,3 @@ syntax enable
 " ヤンク内容をクリップボードに転送　linux にも対応
 command Pbcopy :let @*=@"  "最後にyank or 削除した内容をクリップボードに入れる
 command Pbcopy0 :let @*=@0 "最後にyankした内容をクリップボードに入れる
-
-" ウインドウを最大化（gvimのみの設定）
-au GUIEnter * simalt ~x
