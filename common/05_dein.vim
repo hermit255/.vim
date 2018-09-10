@@ -18,6 +18,7 @@ if dein#load_state($WorkingPath)
   call dein#add('slim-template/vim-slim')
   call dein#add('cohama/agit.vim')
   call dein#add('majutsushi/tagbar')
+  call dein#add('posva/vim-vue')
   "call dein#add('')
 
   " color scheme download
