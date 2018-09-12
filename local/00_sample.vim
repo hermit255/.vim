@@ -14,3 +14,6 @@
 "
 " ウインドウを最大化（gvimのみの設定）
 " au GUIEnter * simalt ~x
+"
+"
+let g:previm_open_cmd = 'open -a /Applications/Google\ Chrome.app'
