@@ -1,24 +1,26 @@
 " ==================================================================================
-" OSŠÂ‹«‚È‚Ç‚Ì·‚É‚æ‚Á‚Äg‚¢•ª‚¯‚·‚é€–Ú
-" clipboard ‹@”\‚Í•Ö—˜‚È‚Ì‚ÅAlinux‚Å‚Í vim-gnome ‚È‚ÇGUI‚ğ”õ‚¦‚½‚à‚Ì‚ª‚æ‚¢
+" OSç’°å¢ƒãªã©ã®å·®ã«ã‚ˆã£ã¦ä½¿ã„åˆ†ã‘ã™ã‚‹é …ç›®
+" clipboard æ©Ÿèƒ½ã¯ä¾¿åˆ©ãªã®ã§ã€linuxã§ã¯ vim-gnome ãªã©GUIã‚’å‚™ãˆãŸã‚‚ã®ãŒã‚ˆã„
 " ==================================================================================
-" ƒ|[ƒ^ƒuƒ‹ŠÂ‹«İ’è‚Ìƒ‹[ƒgƒfƒBƒŒƒNƒgƒŠ
-let $ConfigPath = $HOME. "/vim_config/"
-" dein ‚¨‚æ‚Ñ deinŠÇ—ƒvƒ‰ƒOƒCƒ“‚ÌƒCƒ“ƒXƒg[ƒ‹æ
-let $WorkingPath = $HOME. "/.cache/"
-let $GithubPath = $WorkingPath. "repos/github.com/"
-let $ShougoPath = $GithubPath. "Shougo/"
-let $DeinPath = $ShougoPath. "dein.vim/"
+let $DS = '/'
+" let $DS = '\'
+" ãƒãƒ¼ã‚¿ãƒ–ãƒ«ç’°å¢ƒè¨­å®šã®ãƒ«ãƒ¼ãƒˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒª
+let $ConfigDir = $HOME. $DS. "vim_config"
+" dein ãŠã‚ˆã³ deinç®¡ç†ãƒ—ãƒ©ã‚°ã‚¤ãƒ³ã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«å…ˆ
+let $WorkingDir = $ConfigDir. $DS. "bundle"
+let $GithubDir = $WorkingDir. $DS. "repos". $DS. "github.com"
+let $ShougoDir = $GithubDir. $DS. "Shougo"
+let $DeinDir = $ShougoDir. $DS. "dein.vim"
 
 " Add the dein installation directory into runtimepath
-set runtimepath+=$DeinPath
+set runtimepath+=$DeinDir
 " backup_directory
-let $BackupPath = $WorkingPath. "/.backup"
-set backupdir =$BackupPath
+let $BackupDir = $WorkingDir. $DS. ".backup"
+set backupdir =$BackupDir
 
 filetype plugin indent on
 syntax enable
 
-" ƒ„ƒ“ƒN“à—e‚ğƒNƒŠƒbƒvƒ{[ƒh‚É“]‘—@linux ‚É‚à‘Î‰
-command Pbcopy :let @*=@"  "ÅŒã‚Éyank or íœ‚µ‚½“à—e‚ğƒNƒŠƒbƒvƒ{[ƒh‚É“ü‚ê‚é
-command Pbcopy0 :let @*=@0 "ÅŒã‚Éyank‚µ‚½“à—e‚ğƒNƒŠƒbƒvƒ{[ƒh‚É“ü‚ê‚é
+" ãƒ¤ãƒ³ã‚¯å†…å®¹ã‚’ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«è»¢é€ã€€linux ã«ã‚‚å¯¾å¿œ
+command Pbcopy :let @*=@"  "æœ€å¾Œã«yank or å‰Šé™¤ã—ãŸå†…å®¹ã‚’ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«å…¥ã‚Œã‚‹
+command Pbcopy0 :let @*=@0 "æœ€å¾Œã«yankã—ãŸå†…å®¹ã‚’ã‚¯ãƒªãƒƒãƒ—ãƒœãƒ¼ãƒ‰ã«å…¥ã‚Œã‚‹

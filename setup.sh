@@ -1,4 +1,4 @@
-cachePath="../.cache/"
+cachePath="./bundle/"
 deinInstaller="https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh"
 
 mkdir $cachePath ${cachePath}.backup
