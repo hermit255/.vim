@@ -30,7 +30,8 @@ if dein#load_state($WorkingDir)
   call dein#add('tpope/vim-fugitive.git')
   " status-bar extention
   call dein#add('vim-airline/vim-airline')
-
+  " modify window size
+  call dein#add('simeji/winresizer')
   "call dein#add('')
 
   " color scheme download
