@@ -1,9 +1,9 @@
 cachePath="./bundle/"
 deinInstaller="https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh"
 
-mkdir $cachePath ${cachePath}.backup
-echo " Copying .vimrc to runtimepath..."
-cp .vimrc ../
+# mkdir $cachePath ${cachePath}.backup
+# echo " Copying .vimrc to runtimepath..."
+cp .vimrc ~/ -f
 # echo " Cloning dein.vim..."
 curl $deinInstaller > ${cachePath}installer.sh
 echo " Installing dein.vim..."

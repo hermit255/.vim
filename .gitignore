@@ -1,2 +1,3 @@
+*.swp
 local/*
 !local/00_sample.vim
