@@ -1,13 +1,12 @@
 "================================================================
 "  insert mode
 "================================================================
-" df で左右分割比較ができるようにする
-cnoremap df vertical diffsplit<space>
 " leaderを設定
 let mapleader = "\<Space>"
-" タブ移動の簡略化
+" タブ補助
 nnoremap <Leader>l :tabnext<CR>
 nnoremap <Leader>h :tabprevious<CR>
+nnoremap <Leader>x :tabclose<CR>
 " クオート等を補完
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>

@@ -1,5 +1,7 @@
 " colorscheme はdein設定に依存するのでここでは設定しない
 " 基本設定
+filetype plugin indent on
+syntax enable
 set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp,sjis
 set t_Co=256
@@ -96,3 +98,7 @@ xnoremap <silent> p :call Put_text_without_override_register()<CR>
 
 " grep 実行時にQuickfixWindowを開く
 au QuickFixCmdPost *grep* cwindow
+
+" ヤンク内容をクリップボードに転送　linux にも対応
+command Pbcopy :let @*=@"  "最後にyank or 削除した内容をクリップボードに入れる
+command Pbcopy0 :let @*=@0 "最後にyankした内容をクリップボードに入れる

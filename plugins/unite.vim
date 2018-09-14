@@ -16,3 +16,5 @@ let g:vinarise_enable_auto_detect = 1
 nnoremap <silent> ,vb :Unite build<CR>
 nnoremap <silent> ,vcb :Unite build:!<CR>
 nnoremap <silent> ,vch :UniteBuildClearHighlight<CR>
+
+command Buffer :Unite buffer -vertical -winwidth=30 -wrap
