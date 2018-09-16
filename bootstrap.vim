@@ -3,9 +3,9 @@
 " ==================================================================================
 let g:DS = '/'
 " config root
-let g:ConfigDir = $HOME. DS. ".vim"
+let g:ConfigDir = expand('%:p:h')
 " backup_directory
-let &backupdir =ConfigDir. DS. ".backup"
+let &backupdir = ConfigDir. DS. ".backup"
 
 " disabled: indexed but disabled, copy files to enable from here
 " enabled: no indexed but enabled(for local setting)
