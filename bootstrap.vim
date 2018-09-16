@@ -3,7 +3,7 @@
 " ==================================================================================
 let g:DS = '/'
 " config root
-let g:ConfigDir = expand('<sfile>')
+let g:ConfigDir = expand('<sfile>:p:h')
 " backup_directory
 let &backupdir = ConfigDir. DS. ".backup"
 
