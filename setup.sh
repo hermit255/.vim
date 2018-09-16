@@ -1,4 +1,4 @@
-installDir=${HOME}/.vim/bundle
+installDir=$(cd $(dirname $0); pwd).'/bundle'
 installer=${installDir}/installer.sh
 deinInstaller=https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh
 
