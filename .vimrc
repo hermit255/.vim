@@ -1,2 +1,2 @@
-" runtimepath include ~/.vim without setting 
+set runtimepath+=~/myvim
 runtime! bootstrap.vim

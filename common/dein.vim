@@ -1,13 +1,9 @@
-" dein のインストール先を 
-" ~/.cache/dein または
-" ~/.vim/bundle
-" にすることは強いルールとして固定化するのが無難(不具合経験済み)
-" vim に関するものをまとめる観点から後者をとる
-let g:DInstallDir = ConfigDir. DS. "bundle"
-let g:DeinDir = DInstallDir. DS. "repos". DS. "github.com". DS. "Shougo". DS. "dein.vim"
+" @win, DInstallDir needs `/` to run dein#install()
+let g:DInstallDir = ConfigDir. "/bundle/"
+let g:DeinDir = DInstallDir. "repos/github.com/Shougo/dein.vim"
+" Add the dein installation directory into runtimepath
 let &runtimepath = &runtimepath. ','. DeinDir
 
-" Add the dein installation directory into runtimepath
 
 if dein#load_state(DInstallDir)
   call dein#begin(DInstallDir)
@@ -55,7 +51,7 @@ if dein#load_state(DInstallDir)
   call dein#save_state()
 endif
 
-" 不足プラグインの自動インストール
+" automatically install plugins
 if has('vim_starting') && dein#check_install()
   call dein#install()
 endif

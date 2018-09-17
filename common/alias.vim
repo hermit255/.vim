@@ -25,5 +25,4 @@ vnoremap ' "zdi'<C-R>z'<ESC>
 "  command
 "================================================================
 command Path :let @+ = expand('%:p')  " フォーカス中ファイルのフルパスをクリップボードにコピーする
-command Recent :browse oldfiles  " 最近開いたファイルを選ぶ
 command Config :vs $ConfigPath. "common"

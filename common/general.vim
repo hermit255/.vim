@@ -1,5 +1,4 @@
-" colorscheme はdein設定に依存するのでここでは設定しない
-" 基本設定
+" general setting independent of dein or other plugins
 filetype plugin indent on
 syntax enable
 set encoding=utf-8
