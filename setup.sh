@@ -1,8 +1,20 @@
-installDir=$(cd $(dirname $0); pwd)'/bundle'
+# @windows, you have to `cd myvim` before you run this script
+if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+  ConfigDir=$(cd $(dirname $0); pwd)'/bundle'
+elif [ "$(uname)" == "Darwin" ]; then
+  ConfigDir=$(cd $(dirname $0); pwd)'/bundle'
+elif [ "$(expr substr $(uname -s) 1 5)" == "MINGW" ]; then
+  ConfigDir='.'
+else
+  ConfigDir='.'
+fi
+
+installDir=${ConfigDir}/bundle
 installer=${installDir}/installer.sh
 deinInstaller=https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh
 
-cp -f .vimrc ~/
+cd $ConfigDir
+cp -f .vimrc ../
 
 echo " downloading dein.vim to". installDir
 if [ ! -e ${installDir} ]; then
