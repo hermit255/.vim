@@ -1,9 +1,10 @@
-" @win, DInstallDir needs `/` to run dein#install()
-let g:DInstallDir = ConfigDir. "/bundle/"
-let g:DeinDir = DInstallDir. "repos/github.com/Shougo/dein.vim"
+let g:DInstallDir = ConfigDir. "/bundle"
+if has('win32') || has ('win64')
+  let g:DInstallDir = DInstallDir. "/"
+endif
+let g:DeinDir = ConfigDir. "/bundle/repos/github.com/Shougo/dein.vim"
 " Add the dein installation directory into runtimepath
 let &runtimepath = &runtimepath. ','. DeinDir
-
 
 if dein#load_state(DInstallDir)
   call dein#begin(DInstallDir)
