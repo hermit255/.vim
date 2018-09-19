@@ -1,7 +1,6 @@
 " ==================================================================================
 " clipboard+ is better
 " ==================================================================================
-let g:DS = '/'
 " config root
 let g:ConfigDir = expand('<sfile>:p:h')
 " backup_directory
@@ -18,4 +17,3 @@ runtime! common/syntax.vim
 " plugin setting
 runtime! plugins/*.vim
 runtime! enabled/after/*.vim
-

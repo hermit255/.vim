@@ -22,7 +22,14 @@ vnoremap " "zdi"<C-R>z"<ESC>
 vnoremap ' "zdi'<C-R>z'<ESC>
 
 "================================================================
+
+" grep 実行時にQuickfixWindowを開く
+au QuickFixCmdPost *grep* vs | 20cwindow
+
+" ヤンク内容をクリップボードに転送　linux にも対応
+command Pbcopy :let @*=@"  "最後にyank or 削除した内容をクリップボードに入れる
+command Pbcopy0 :let @*=@0 "最後にyankした内容をクリップボードに入れる
 "  command
 "================================================================
 command Path :let @+ = expand('%:p')  " フォーカス中ファイルのフルパスをクリップボードにコピーする
-command Config :vs $ConfigPath. "common"
+command Config :vs `=ConfigDir`"/common"

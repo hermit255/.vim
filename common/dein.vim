@@ -18,6 +18,8 @@ if dein#load_state(DInstallDir)
   call dein#add('Shougo/vimproc')
   " enable Unite command e.g. `:Unite buffer`, `:Unite file` and so on
   call dein#add('Shougo/unite.vim')
+  " enable Unite file_mru
+  call dein#add('Shougo/neomru.vim')
   call dein#add('tpope/vim-surround')
   " html/css helper 
   call dein#add('mattn/emmet-vim')
@@ -39,7 +41,7 @@ if dein#load_state(DInstallDir)
   call dein#add('tpope/vim-fugitive.git')
   " status-bar extention
   call dein#add('vim-airline/vim-airline')
-  " modify window size
+  " enable window size controll with ctrl+E
   call dein#add('simeji/winresizer')
   "call dein#add('')
 

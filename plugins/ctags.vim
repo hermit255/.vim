@@ -6,4 +6,5 @@
 set tags=./.tags;
 
 " F3キー→何番目の定義箇所に飛ぶか選択することで ctrl+] 結果を別タグで開く
-nnoremap <F3> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
+"nnoremap <F3> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
+nnoremap <F3> :<C-u>vertical stj <C-R>=expand('<cword>')<CR><CR>
