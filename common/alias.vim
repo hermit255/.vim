@@ -21,6 +21,8 @@ vnoremap ( "zdi(<C-R>z)<ESC>
 vnoremap " "zdi"<C-R>z"<ESC>
 vnoremap ' "zdi'<C-R>z'<ESC>
 
+" yank a line without newline
+nnoremap gy ^y$
 "================================================================
 
 " grep 実行時にQuickfixWindowを開く
