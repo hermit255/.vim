@@ -2,9 +2,9 @@
 " clipboard+ is better
 " ==================================================================================
 " config root
-let g:ConfigDir = expand('<sfile>:p:h')
+let g:ConfigPath = expand('<sfile>:p:h')
 " backup_directory
-let &backupdir = ConfigDir. "/.backup"
+let &backupdir = ConfigPath. "/.backup"
 
 " disabled: indexed but disabled, copy files to enable from here
 " enabled: no indexed but enabled(for local setting)

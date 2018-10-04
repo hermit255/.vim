@@ -34,4 +34,4 @@ command Pbcopy0 :let @*=@0 "最後にyankした内容をクリップボードに
 "  command
 "================================================================
 command Path :let @+ = expand('%:p')  " フォーカス中ファイルのフルパスをクリップボードにコピーする
-command Config :vs `=ConfigDir`"/common"
+command Config :vs `=ConfigPath`"/common"

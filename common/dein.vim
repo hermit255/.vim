@@ -1,15 +1,15 @@
-let g:DInstallDir = ConfigDir. "/bundle"
+let g:DInstallPath = ConfigPath. "/bundle"
 if has('win32') || has ('win64')
-  let g:DInstallDir = DInstallDir. "/"
+  let g:DInstallPath = DInstallPath. "/"
 endif
-let g:DeinDir = ConfigDir. "/bundle/repos/github.com/Shougo/dein.vim"
+let g:DeinDir = ConfigPath. "/bundle/repos/github.com/Shougo/dein.vim"
 " Add the dein installation directory into runtimepath
-let &runtimepath = &runtimepath. ','. DeinDir
+let &runtimepath = DeinDir. ','. &runtimepath 
 
-if dein#load_state(DInstallDir)
-  call dein#begin(DInstallDir)
+if dein#load_state(DInstallPath)
+  call dein#begin(DInstallPath)
 
-  call dein#add(DInstallDir)
+  call dein#add(DInstallPath)
   call dein#add('Shougo/deoplete.nvim')
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
