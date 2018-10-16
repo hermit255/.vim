@@ -3,11 +3,11 @@ nnoremap    [unite]   <Nop>
 nmap    <Leader> [unite]
 
 " buffer list
-nnoremap <silent> [unite]b :<C-u>Unite<Space>buffer<Space>-vertical<Space>-winwidth=40<Space>-wrap<CR>
+nnoremap <silent> [unite]b :<C-u>Unite<Space>buffer<Space>-vertical<Space>-winwidth=70<Space>-wrap<CR>
 " old files
-nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<Space>-vertical<Space>-winwidth=40<Space>-wrap<CR>
+nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<Space>-vertical<Space>-winwidth=70<Space>-wrap<CR>
 " register history
-nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<Space>-vertical<Space>-winwidth=40<Space>-wrap<CR>
+nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<Space>-vertical<Space>-winwidth=70<Space>-wrap<CR>
 " open file with horizontal split
 au FileType unite nnoremap <silent> <buffer> <expr> h unite#do_action('split')
 au FileType unite inoremap <silent> <buffer> <expr> h unite#do_action('split')

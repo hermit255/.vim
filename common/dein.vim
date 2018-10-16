@@ -2,11 +2,11 @@ let g:DInstallPath = ConfigPath. "/bundle"
 if has('win32') || has ('win64')
   let g:DInstallPath = DInstallPath. "/"
 endif
-let g:DeinDir = ConfigPath. "/bundle/repos/github.com/Shougo/dein.vim"
+let g:DeinDir = ConfigPath. "/bundle/repos/github.com/Shougo/dein.vim/"
 " Add the dein installation directory into runtimepath
 let &runtimepath = DeinDir. ','. &runtimepath 
 
-if dein#load_state(DInstallPath)
+if dein#load_state(DInstallPath. '/')
   call dein#begin(DInstallPath)
 
   call dein#add(DInstallPath)
@@ -15,22 +15,22 @@ if dein#load_state(DInstallPath)
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
   endif
+  call dein#add('Shougo/neocomplcache')
   call dein#add('Shougo/vimproc')
   " enable Unite command e.g. `:Unite buffer`, `:Unite file` and so on
   call dein#add('Shougo/unite.vim')
   " enable Unite file_mru
   call dein#add('Shougo/neomru.vim')
-  call dein#add('tpope/vim-surround')
-  " html/css helper 
-  call dein#add('mattn/emmet-vim')
   " your snippet
   call dein#add('Shougo/neosnippet')
   call dein#add('Shougo/neosnippet-snippets')
+  " html/css helper 
+  call dein#add('mattn/emmet-vim')
+  " surround helper"
+  call dein#add('tpope/vim-surround')
   call dein#add('rking/ag.vim')
   " IDE like tree filer
   call dein#add('scrooloose/nerdtree')
-  " share nerdtree among tabs
-    ""call dein#add('jistr/vim-nerdtree-tabs')
   " syntax checker
   call dein#add('scrooloose/syntastic.git')
   " call dein#add('slim-template/vim-slim')
@@ -43,6 +43,7 @@ if dein#load_state(DInstallPath)
   call dein#add('vim-airline/vim-airline')
   " enable window size controll with ctrl+E
   call dein#add('simeji/winresizer')
+  call dein#add('h1mesuke/vim-alignta')
   "call dein#add('')
 
   " color scheme download
