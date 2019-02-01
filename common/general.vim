@@ -14,11 +14,13 @@ set iminsert=0
 set imsearch=0
 set ambiwidth=double
 set expandtab
-set tabstop=2
-set smarttab
-set shiftwidth=2
-set showmatch
 set smartindent
+set autoindent
+set smarttab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set showmatch
 set nrformats-=octal
 set hidden
 set history=50
@@ -29,6 +31,9 @@ set wildmenu
 set autochdir
 set splitright
 set nowrapscan
+" 保管候補を一覧に表示
+set wildmenu
+set wildmode=list:longest
 " 検索語をハイライト
 set hlsearch
 " 自動改行設定を一部無効化(t, c をキャンセル)
@@ -48,6 +53,8 @@ set wildmode=longest:full,full
 
 " ヤンク内容をクリップボードに転送　autoselectをセットすると選択範囲が優先して送られるので指定を外している
 set clipboard=unnamed
+" diff系を縦分割で開く
+set diffopt+=vertical
 " htmlタグの対応関係を把握可能にする
 source $VIMRUNTIME/macros/matchit.vim
 
