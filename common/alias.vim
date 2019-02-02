@@ -22,6 +22,8 @@ vnoremap " "zdi"<C-R>z"<ESC>
 vnoremap ' "zdi'<C-R>z'<ESC>
 " 検索方式を正規表現にする
 nmap / /\v
+" jj でインサートモードから抜ける"
+inoremap <silent>jj <esc>
 
 " yank a line without newline
 nnoremap gy ^y$
@@ -36,4 +38,4 @@ command Pbcopy0 :let @*=@0 "最後にyankした内容をクリップボードに
 "  command
 "================================================================
 command Path :let @+ = expand('%:p')  " フォーカス中ファイルのフルパスをクリップボードにコピーする
-command Config :vs `=ConfigPath`"/common"
+command Config :tab new `=ConfigPath`"/common"
