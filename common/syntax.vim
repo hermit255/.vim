@@ -15,7 +15,6 @@ endif
 " この方法が有効である(空でない)時にはその他 のインデントは抑制される。
 set smartindent " 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
 
-
 set smarttab " softtabstopを有効にする
 set shiftwidth=2 " 自動インデントで入る空白数
 set expandtab " タブ入力を複数の空白に置き換える
@@ -49,3 +48,10 @@ if has("autocmd")
   " 拡張子に任意のファイルタイプを設定する(複数のシンタックスを設定する場合は.で繋ぐ)
   autocmd BufRead,BufNewFile *.vue setfiletype html.javascript
 endif
+
+set spell " スペルチェックを有効化
+set spelllang=en,cjk " スペルミスから日本語を除外
+hi clear SpellBad
+hi SpellBad cterm=underline
+hi clear SpellCap
+hi SpellCap cterm=underline,bold
