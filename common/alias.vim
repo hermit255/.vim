@@ -20,7 +20,8 @@ inoremap < <><LEFT>
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 inoremap ` ``<LEFT>
-inoremap <silent>jj <esc> " jj でインサートモードから抜ける
+" jj でインサートモードから抜ける
+inoremap <silent>jj <esc>
 
 "================================================================
 "  visual mode

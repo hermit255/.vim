@@ -13,6 +13,7 @@ installDir=${ConfigDir}/bundle
 echo "ConfigDir =" ${ConfigDir}
 installer=${installDir}/installer.sh
 echo "installer =" ${installer}
+# notice: dein requires `git` command
 deinInstaller=https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh
 echo "deinInstaller =" ${deinInstaller}
 
