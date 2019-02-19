@@ -47,3 +47,10 @@ if has("autocmd")
   " 拡張子に任意のファイルタイプを設定する(複数のシンタックスを設定する場合は.で繋ぐ)
   autocmd BufRead,BufNewFile *.vue setfiletype html.javascript
 endif
+
+set spell " スペルチェックを有効化
+set spelllang=en,cjk " スペルミスから日本語を除外
+hi clear SpellBad
+hi SpellBad cterm=underline
+hi clear SpellCap
+hi SpellCap cterm=underline,bold
