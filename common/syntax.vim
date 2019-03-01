@@ -13,8 +13,7 @@ endif
 " cindent' 他の2つの方法よりも賢く動作し、設定することで異なるインデントスタイルにも対応できる。
 " indentexpr'  この中で一番融通が利く: ある行のインデントを計算するのにVimスクリプトを実行する。
 " この方法が有効である(空でない)時にはその他 のインデントは抑制される。
-set smartindent " 改行時に入力された行の末尾に合わせて次の行のインデントを増減する
-
+set cindent
 set smarttab " softtabstopを有効にする
 set shiftwidth=2 " 自動インデントで入る空白数
 set expandtab " タブ入力を複数の空白に置き換える

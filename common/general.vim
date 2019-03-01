@@ -39,6 +39,7 @@ set showmatch " `%`で対応する開始記号/終了記号にジャンプ
 set virtualedit=block " 矩形選択時に空白行を選択可能にする
 set textwidth=0 " テキストの自動改行を無効化
 set backspace=indent,eol,start " オートインデント、行、挿入区間であってもbackspaceを通常動作させる
+set whichwrap=b,s,h,l,[,],<,> " 行跨ぎを有効にするキー設定
 
 "================================================================
 "  tabs
