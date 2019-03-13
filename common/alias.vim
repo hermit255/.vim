@@ -7,7 +7,10 @@ nnoremap <Leader>h :tabprevious<CR>
 nnoremap <Leader>x :tabclose<CR>
 " 検索方式を正規表現にする
 nnoremap / /\v
-nnoremap Y ^y$ " カーソル位置から行末までをヤンクする
+" 行を改行なしでヤンクする
+nnoremap Y ^y$
+" * を押した時点でカーソルを動かさない(検索語をハイライトするだけ)
+nnoremap * *N
 
 "================================================================
 "  insert mode

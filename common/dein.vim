@@ -32,6 +32,7 @@ if dein#load_state(DInstallPath. '/')
   call dein#add('simeji/winresizer') " enable window size controll with ctrl+E
   call dein#add('majutsushi/tagbar') " tagbar with F8
   call dein#add('previm/previm') " enable markdown previewer `PrevimOpen` or else
+  call dein#add('osyo-manga/vim-anzu') " show number of searched word when `/` clicked
   " helper
   call dein#add('tpope/vim-surround') " surround helper
   call dein#add('mattn/emmet-vim') " html/css helper
