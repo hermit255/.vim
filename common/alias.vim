@@ -34,6 +34,8 @@ vnoremap [ "zdi[<C-R>z]<ESC>
 vnoremap ( "zdi(<C-R>z)<ESC>
 vnoremap " "zdi"<C-R>z"<ESC>
 vnoremap ' "zdi'<C-R>z'<ESC>
+" 選択範囲の単語を検索する
+vnoremap * y/<C-R>"/<CR>N
 
 set whichwrap=b,s,h,l,[,],<,> " 行跨ぎを有効にするキー設定
 
