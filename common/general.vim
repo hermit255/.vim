@@ -80,7 +80,7 @@ set smartcase " 検索時に大文字を含んでいたら大/小を区別
 "================================================================
 "  yank or clipboard
 "================================================================
-set clipboard=unnamed " ヤンク内容(unnamed bubber)をクリップボードに転送
+set clipboard=unnamedplus " ヤンク内容(unnamed bubber)をクリップボードに転送
 " vモードの置換連続ペースト用 参考  http://qiita.com/hikaruna/items/83c1220eede810bee492
 " vモードで既存の文字列を選択して貼り付けると、上書きされた部分がヤンクされたことになる問題への対処
 function! Put_text_without_override_register()
