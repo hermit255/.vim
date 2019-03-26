@@ -19,6 +19,11 @@ set shiftwidth=2 " 自動インデントで入る空白数
 set expandtab " タブ入力を複数の空白に置き換える
 set softtabstop=2 " キーボードから入るタブの数
 set tabstop=2 " 既存ファイルの<tab>文字を何文字の空白に変換するか
+" set isk+=- " -を単語の一部として認識する
+set isk+=_ " _を単語の一部として認識する
+
+" http://labs.timedia.co.jp/2011/04/9-points-to-customize-automatic-indentation-in-vim.html
+setlocal indentkeys=!^F,o,O,0<Bar>,0=where " インデント発生するキーの指定
 
 set formatoptions=q " 自動改行を無効化
 set noeol " 保存時に自動で入る行末の改行を無効化
