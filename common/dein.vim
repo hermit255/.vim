@@ -42,6 +42,7 @@ if dein#load_state(DInstallPath. '/')
   call dein#add('scrooloose/syntastic.git') " syntax checker
   call dein#add('posva/vim-vue') " Vim syntax highlighting for Vue components
   call dein#add('h1mesuke/vim-alignta') " markdown table helper
+  call dein#add('udalov/kotlin-vim') " kotlin
   " color scheme
   call dein#add('sjl/badwolf')
   call dein#add('nanotech/jellybeans.vim')
@@ -50,6 +51,7 @@ if dein#load_state(DInstallPath. '/')
   call dein#end()
   call dein#save_state()
 endif
+" if new plugins wouldn't be installed(), manually exec `call dein#recache_runtimepath()`
 
 " automatically install plugins
 if has('vim_starting') && dein#check_install()
