@@ -1,15 +1,29 @@
-" ctags をインストールしてパスを通していれば ctags コマンドを使えるようにする
-" タグファイル名は .tags とするのでコマンドは以下
-" ctags -R -f .tags
+" search tags from current to home
+set tags=./.tags;$HOME,.tags;$HOME
 
-" 最初に開いたファイルから遡って .tags を探す
-set tags=./.tags;
-
-" F3キー→何番目の定義箇所に飛ぶか選択することで ctrl+] 結果を別タグで開く
+" F3 to open Jump List
 "nnoremap <F3> :<C-u>tab stj <C-R>=expand('<cword>')<CR><CR>
 nnoremap <F3> :<C-u>vertical stj <C-R>=expand('<cword>')<CR><CR>
 
-function! s:make_tags()
-  !ctags -R -f .tags
+" make .tags on save
+" refered: https://qiita.com/aratana_tamutomo/items/59fb4c377863a385e032
+function! s:execute_ctags() abort
+  let tag_name = '.tags'
+  let git_name = '.git'
+
+  let tags_path = findfile(tag_name, '.;')
+  if tags_path ==# ''
+    let tags_path = findfile(tag_name, '.;')
+  endif
+  if tags_path ==# ''
+    return
+  endif
+
+  let tags_dirpath = fnamemodify(tags_path, ':p:h')
+  execute 'silent !cd' tags_dirpath '&& ctags -R -f' tag_name '2> /dev/null &'
 endfunction
-command! -nargs=0 MakeTags call s:make_tags()
+
+augroup ctags
+  autocmd!
+  autocmd BufWritePost * call s:execute_ctags()
+augroup END

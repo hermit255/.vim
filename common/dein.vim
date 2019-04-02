@@ -35,6 +35,7 @@ if dein#load_state(DInstallPath. '/')
   call dein#add('osyo-manga/vim-anzu') " show number of searched word when `/` clicked
   call dein#add('vim-scripts/grep.vim') " substitute terminal grep for vimgrep
   call dein#add('kamykn/CCSpellCheck.vim') " treat CamelCase as word
+  call dein#add('Lokaltog/vim-easymotion') " enable visual based jump of hint, word, or line
   " helper
   call dein#add('tpope/vim-surround') " surround helper
   call dein#add('mattn/emmet-vim') " html/css helper
