@@ -18,7 +18,15 @@ if dein#load_state(DInstallPath. '/')
   " # Shougo
   call dein#add('Shougo/neocomplcache') " input helper
   " call dein#add('Shougo/neocomplete') " input helper(newer than neocomplcache)
-  call dein#add('Shougo/vimproc') " library
+  call dein#add('Shougo/vimproc', {
+    \ 'build': {
+    \     'windows' : 'tools\\update-dll-mingw',
+    \     'cygwin'  : 'make -f make_cygwin.mak',
+    \     'mac'     : 'make -f make_mac.mak',
+    \     'linux'   : 'make',
+    \     'unix'    : 'gmake',
+    \    },
+    \ })
   call dein#add('Shougo/unite.vim')
   call dein#add('Shougo/neomru.vim') " enable Unite file_mru(file history)
   " call dein#add('Shougo/neoyank.vim') " yank history
