@@ -4,4 +4,4 @@ let g:NERDTreeShowBookmarks=1
 " 隠しファイルをデフォルトで表示させる
 let NERDTreeShowHidden = 1
 " 無視設定
-let g:NERDTreeIgnore=['\.DS_Store$', '\.git$', '\.svn$', '\.clean$', '\.swp$', '\.bak$', '\.hg$', '\.hgcheck$', '\~$']
+let g:NERDTreeIgnore=['\.DS_Store$', '\.clean$', '\.hg$', '\.hgcheck$', '\~$']

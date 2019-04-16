@@ -10,12 +10,12 @@ if dein#load_state(DInstallPath. '/')
   call dein#begin(DInstallPath)
 
   call dein#add(DInstallPath) " self
-  call dein#add('Shougo/deoplete.nvim')
+  call dein#add('Shougo/deoplete.nvim') " complement code
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
   endif
-  " Shougo
+  " # Shougo
   call dein#add('Shougo/neocomplcache') " input helper
   " call dein#add('Shougo/neocomplete') " input helper(newer than neocomplcache)
   call dein#add('Shougo/vimproc') " library
@@ -24,11 +24,17 @@ if dein#load_state(DInstallPath. '/')
   " call dein#add('Shougo/neoyank.vim') " yank history
   call dein#add('Shougo/neosnippet') " your snippet
   call dein#add('Shougo/neosnippet-snippets')
+  " # tpope
+  call dein#add('tpope/vim-surround') " surround helper
+  call dein#add('tpope/vim-repeat') " repeat(`.`) helper
+  call dein#add('tpope/vim-commentary') " commentout multiline
+  call dein#add('tpope/vim-fugitive.git') " git helper e.g. `:Gdiff`
+  call dein#add('tpope/vim-speeddating') " enable date increment
   " UI expantion
   call dein#add('vim-airline/vim-airline') " status-bar extention
+  call dein#add('airblade/vim-gitgutter') " show diff from git index on left
   " command expantion
   call dein#add('scrooloose/nerdtree') " IDE like tree filer
-  call dein#add('tpope/vim-fugitive.git') " git helper e.g. `:Gdiff`
   call dein#add('simeji/winresizer') " enable window size controll with ctrl+E
   call dein#add('majutsushi/tagbar') " tagbar with F8
   call dein#add('previm/previm') " enable markdown previewer `PrevimOpen` or else
@@ -37,13 +43,14 @@ if dein#load_state(DInstallPath. '/')
   call dein#add('kamykn/CCSpellCheck.vim') " treat CamelCase as word
   call dein#add('Lokaltog/vim-easymotion') " enable visual based jump of hint, word, or line
   " helper
-  call dein#add('tpope/vim-surround') " surround helper
   call dein#add('mattn/emmet-vim') " html/css helper
   " syntax
   call dein#add('scrooloose/syntastic.git') " syntax checker
+  call dein#add('w0rp/ale') " ES lint
   call dein#add('posva/vim-vue') " Vim syntax highlighting for Vue components
   call dein#add('h1mesuke/vim-alignta') " markdown table helper
   call dein#add('udalov/kotlin-vim') " kotlin
+  call dein#add('chrisbra/csv.vim') " deal csv
   " color scheme
   call dein#add('sjl/badwolf')
   call dein#add('nanotech/jellybeans.vim')

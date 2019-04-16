@@ -1,10 +1,14 @@
-let mapleader = "\<Space>" " leaderを設定
+" `:verbose nmap` then npam shown
+let mapleader = "\<Space>" " leader
 "================================================================
 "  normal mode
-"================================================================ " タブ補助
+"================================================================
+" tab operation
 nnoremap <Leader>l :tabnext<CR>
 nnoremap <Leader>h :tabprevious<CR>
 nnoremap <Leader>x :tabclose<CR>
+" reload
+nnoremap <Leader>r :e!<CR>
 " 検索方式を正規表現にする
 nnoremap / /\v
 " 行を改行なしでヤンクする
@@ -24,8 +28,7 @@ inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 inoremap ` ``<LEFT>
 " jj でインサートモードから抜ける
-inoremap <silent>jj <esc>
-
+inoremap jj <esc>
 "================================================================
 "  visual mode
 "================================================================
