@@ -24,12 +24,12 @@ if dein#load_state(DInstallPath. '/')
     \     'cygwin'  : 'make -f make_cygwin.mak',
     \     'mac'     : 'make -f make_mac.mak',
     \     'linux'   : 'make',
-    \     'unix'    : 'gmake',
+    \     'unix'    : 'make -f make_unix.mak',
     \    },
     \ })
   call dein#add('Shougo/unite.vim')
   call dein#add('Shougo/neomru.vim') " enable Unite file_mru(file history)
-  " call dein#add('Shougo/neoyank.vim') " yank history
+  call dein#add('Shougo/neoyank.vim') " yank history
   call dein#add('Shougo/neosnippet') " your snippet
   call dein#add('Shougo/neosnippet-snippets')
   " # tpope
@@ -41,11 +41,12 @@ if dein#load_state(DInstallPath. '/')
   " UI expantion
   call dein#add('vim-airline/vim-airline') " status-bar extention
   call dein#add('airblade/vim-gitgutter') " show diff from git index on left
-  " command expantion
+  command expantion
   call dein#add('scrooloose/nerdtree') " IDE like tree filer
   call dein#add('simeji/winresizer') " enable window size controll with ctrl+E
   call dein#add('majutsushi/tagbar') " tagbar with F8
-  call dein#add('previm/previm') " enable markdown previewer `PrevimOpen` or else
+  " call dein#add('previm/previm') " enable markdown previewer `PrevimOpen` or else(original)
+  call dein#add('kazuph/previm', {'rev': 'feature/add-plantuml-plugin'}) " previm mod with PlantUML
   call dein#add('osyo-manga/vim-anzu') " show number of searched word when `/` clicked
   call dein#add('vim-scripts/grep.vim') " substitute terminal grep for vimgrep
   call dein#add('kamykn/CCSpellCheck.vim') " treat CamelCase as word
