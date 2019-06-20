@@ -3,6 +3,7 @@
 "================================================================
 set nocompatible " vi互換をオフ
 set encoding=utf-8
+set fileformats=unix,dos,mac
 set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp,sjis
 set t_Co=256
 set backup
@@ -20,6 +21,8 @@ set formatoptions=q " 自動改行を無効化
 set noeol " 保存時に自動で入る行末の改行を無効化
 set spell " スペルチェックを有効化
 set spelllang=en,cjk " スペルミスから日本語を除外
+" colorscheme
+colorscheme tender
 
 "================================================================
 "  input
@@ -75,9 +78,9 @@ set showtabline=2 " 常にタブラインを表示
 "================================================================
 set nowrapscan "`/`検索結果をループさせない
 set hlsearch " 検索語をハイライト
-" highlight blue
-hi Search ctermfg=blue
 set smartcase " 検索時に大文字を含んでいたら大/小を区別
+" highlight matched
+autocmd ColorScheme * highlight Search ctermfg=255 ctermbg=18 gui=italic guifg=#465457
 
 "================================================================
 "  yank or clipboard
