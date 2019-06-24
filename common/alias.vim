@@ -16,7 +16,7 @@ nnoremap Y ^y$
 " * を押した時点でカーソルを動かさない(検索語をハイライトするだけ)
 nnoremap * *N
 " カーソル位置のファイルを横分割で開く
-nnoremap gh :wincmd f<CR>
+nnoremap gi :wincmd f<CR>
 " カーソル位置のファイルを縦分割で開く
 nnoremap gs :vertical wincmd f<CR>
 
