@@ -18,21 +18,14 @@ if dein#load_state(DInstallPath. '/')
   " # Shougo
   call dein#add('Shougo/neocomplcache') " input helper
   " call dein#add('Shougo/neocomplete') " input helper(newer than neocomplcache)
-  call dein#add('Shougo/vimproc', {
-    \ 'build': {
-    \     'windows' : 'tools\\update-dll-mingw',
-    \     'cygwin'  : 'make -f make_cygwin.mak',
-    \     'mac'     : 'make -f make_mac.mak',
-    \     'linux'   : 'make',
-    \     'unix'    : 'make -f make_unix.mak',
-    \    },
-    \ })
+  "
+  call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
   call dein#add('Shougo/unite.vim')
   call dein#add('Shougo/neomru.vim') " enable Unite file_mru(file history)
   call dein#add('Shougo/neoyank.vim') " yank history
   call dein#add('Shougo/neosnippet') " your snippet
   call dein#add('Shougo/neosnippet-snippets')
-  " # tpope
+  " tpope
   call dein#add('tpope/vim-surround') " surround helper
   call dein#add('tpope/vim-repeat') " repeat(`.`) helper
   call dein#add('tpope/vim-commentary') " commentout multiline
@@ -41,7 +34,7 @@ if dein#load_state(DInstallPath. '/')
   " UI expantion
   call dein#add('vim-airline/vim-airline') " status-bar extention
   call dein#add('airblade/vim-gitgutter') " show diff from git index on left
-  command expantion
+  " command expantion
   call dein#add('scrooloose/nerdtree') " IDE like tree filer
   call dein#add('simeji/winresizer') " enable window size controll with ctrl+E
   call dein#add('majutsushi/tagbar') " tagbar with F8

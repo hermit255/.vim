@@ -8,6 +8,7 @@ nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<Space>-vertical<Space>-win
 nnoremap <silent> [unite]w :<C-u>Unite<Space>window<Space>-vertical<Space>-winwidth=70<Space>-wrap<CR>
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> [unite]y :<C-u>Unite<Space>history/yank<Space>-vertical<Space>-winwidth=70<Space>-wrap<CR>
+nnoremap <silent> [unite]g :<C-u>Unite<Space>file_rec/git<Space>-vertical<Space>-winwidth=70<Space>-wrap<CR>
 
 " open file with horizontal split
 " au FileType unite nnoremap <silent> <buffer> <expr> h unite#do_action('split')
@@ -36,14 +37,14 @@ let g:unite_enable_smart_case = 1
 " let g:unite_enable_smart_case = 1
 
 " grep search
-" nnoremap <silent> ,g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
+nnoremap <silent> ,g  :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
 " grep search the word on carsol
-" nnoremap <silent> ,cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
+nnoremap <silent> ,cg :<C-u>Unite grep:. -buffer-name=search-buffer<CR><C-R><C-W>
 " reload grep
-" nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
+nnoremap <silent> ,r  :<C-u>UniteResume search-buffer<CR>
 " unite grep に ag(The Silver Searcher) を使う
-" "if executable('ag')
-" "  let g:unite_source_grep_command = 'ag'
-" "  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
-" "  let g:unite_source_grep_recursive_opt = ''
-" "endif
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
