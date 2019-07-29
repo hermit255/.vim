@@ -24,9 +24,9 @@ command! -nargs=1 DiffRev call s:get_diff_files(<q-args>)
 " reset BufferDirectory
 function! s:git_root_dir(dir)
   if(system('git -C '. a:dir . ' rev-parse --is-inside-work-tree') == "true\n")
-      return system('git -C '. a:dir . ' rev-parse --show-toplevel')
+    return system('git -C '. a:dir . ' rev-parse --show-toplevel')
   else
-      echoerr '!!!current directory is outside git working tree!!!'
+    return a:dir
   endif
 endfunction
 

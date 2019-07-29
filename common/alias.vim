@@ -58,6 +58,7 @@ tnoremap <C-w>n <C-\><C-n> "ターミナルから新規バッファを開く可�
 command Pbcopy :let @*=@"  "最後にyank or 削除した内容をクリップボードに入れる
 command Pbcopy0 :let @*=@0 "最後にyankした内容をクリップボードに入れる
 command Path :let @+ = expand('%:p')  " カレントバッファのフルパスをクリップボードにコピーする
+command CurrentPath :cd %:h " カレントバッファのフルパスをクリップボードにコピーする
 command Config :tab new `=ConfigPath`"/common"
 
 if has("autocmd")

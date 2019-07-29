@@ -58,8 +58,13 @@ if dein#load_state(DInstallPath. '/')
   call dein#add('nanotech/jellybeans.vim')
   call dein#add('jacoborus/tender.vim')
 
+  call dein#add('prabirshrestha/async.vim')
+  call dein#add('prabirshrestha/vim-lsp')
+  call dein#add('felixfbecker/php-language-server')
+
   call dein#end()
   call dein#save_state()
+
 endif
 " if new plugins wouldn't be installed(), manually exec `call dein#recache_runtimepath()`
 
