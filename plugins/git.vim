@@ -21,23 +21,18 @@ function! s:get_diff_files(rev)
   copen
 endfunction
 command! -nargs=1 DiffRev call s:get_diff_files(<q-args>)
-
-" ----------------------------------------------------------------------------
-" GoGitRoot
-" ----------------------------------------------------------------------------
-" reffered: https://rhysd.hatenablog.com/entry/20120602/1338651566
-function! s:git_root_dir()
-  " current directory(absolute)
-  let pwd = expand("%:p:h")
-  " if managed by git
-  let managedByGit = system('cd '. pwd. ' && '. 'git rev-parse --is-inside-work-tree') == "true\n"
-  " project root
-  let gitRootRelative = system('cd '. pwd. ' && '. 'git rev-parse --show-toplevel')
-    if(managedByGit)
-      execute('cd '. gitRootRelative)
-      echo gitRootRelative
-    else
-        echoerr '!!!current directory is outside git working tree!!!'
-    endif
+" reset BufferDirectory
+function! s:git_root_dir(dir)
+  if(system('git -C '. a:dir . ' rev-parse --is-inside-work-tree') == "true\n")
+      return system('git -C '. a:dir . ' rev-parse --show-toplevel')
+  else
+      echoerr '!!!current directory is outside git working tree!!!'
+  endif
 endfunction
-command! -nargs=0 GoGitRoot call s:git_root_dir()
+
+" set directories path on moving buffer
+augroup directories
+  autocmd!
+  autocmd BufEnter * let b:cwd = expand("%:p:h")
+  autocmd BufEnter * let b:git_root_dir = s:git_root_dir(b:cwd)
+augroup END

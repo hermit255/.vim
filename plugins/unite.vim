@@ -3,12 +3,9 @@ nnoremap    [unite]   <Nop>
 nmap    <Leader> [unite]
 
 nnoremap <silent> [unite]b :<C-u>Unite<Space>buffer<Space>-vertical<Space>-winwidth=70<Space>-wrap<CR>
-nnoremap <silent> [unite]f :<C-u>Unite<Space>file<Space>-vertical<Space>-winwidth=70<Space>-wrap<CR>
 nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<Space>-vertical<Space>-winwidth=70<Space>-wrap<CR>
-nnoremap <silent> [unite]w :<C-u>Unite<Space>window<Space>-vertical<Space>-winwidth=70<Space>-wrap<CR>
 nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> [unite]y :<C-u>Unite<Space>history/yank<Space>-vertical<Space>-winwidth=70<Space>-wrap<CR>
-nnoremap <silent> [unite]g :<C-u>Unite<Space>file_rec/git<Space>-vertical<Space>-winwidth=70<Space>-wrap<CR>
 
 " open file with horizontal split
 " au FileType unite nnoremap <silent> <buffer> <expr> h unite#do_action('split')
