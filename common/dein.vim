@@ -38,6 +38,7 @@ if dein#load_state(DInstallPath. '/')
   call dein#add('scrooloose/nerdtree') " IDE like tree filer
   call dein#add('simeji/winresizer') " enable window size controll with ctrl+E
   call dein#add('majutsushi/tagbar') " tagbar with F8
+  call dein#add('ctrlpvim/ctrlp.vim') " find filename with ctrl+p
   " call dein#add('previm/previm') " enable markdown previewer `PrevimOpen` or else(original)
   call dein#add('kazuph/previm', {'rev': 'feature/add-plantuml-plugin'}) " previm mod with PlantUML
   call dein#add('osyo-manga/vim-anzu') " show number of searched word when `/` clicked
