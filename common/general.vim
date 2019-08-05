@@ -21,8 +21,6 @@ set formatoptions=q " 自動改行を無効化
 set noeol " 保存時に自動で入る行末の改行を無効化
 set spell " スペルチェックを有効化
 set spelllang=en,cjk " スペルミスから日本語を除外
-" colorscheme
-colorscheme tender
 
 "================================================================
 "  input

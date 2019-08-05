@@ -17,6 +17,7 @@ runtime! common/general.vim
 runtime! common/keybind.vim
 runtime! common/alias.vim
 runtime! common/syntax.vim
+runtime! common/colorscheme.vim
 " plugin setting
 runtime! plugins/*.vim
 runtime! enabled/after/*.vim
