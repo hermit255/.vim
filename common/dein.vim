@@ -59,10 +59,6 @@ if dein#load_state(DInstallPath. '/')
   call dein#add('nanotech/jellybeans.vim')
   call dein#add('jacoborus/tender.vim')
 
-  call dein#add('prabirshrestha/async.vim')
-  call dein#add('prabirshrestha/vim-lsp')
-  call dein#add('felixfbecker/php-language-server')
-
   call dein#end()
   call dein#save_state()
 
