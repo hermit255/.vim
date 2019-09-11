@@ -4,8 +4,10 @@ nmap    <Leader> [unite]
 
 nnoremap <silent> [unite]b :<C-u>Unite<Space>buffer<Space>-vertical<Space>-winwidth=70<Space>-wrap<CR>
 nnoremap <silent> [unite]m :<C-u>Unite<Space>file_mru<Space>-vertical<Space>-winwidth=70<Space>-wrap<CR>
-nnoremap <silent> [unite]r :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> [unite]ur :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> [unite]y :<C-u>Unite<Space>history/yank<Space>-vertical<Space>-winwidth=70<Space>-wrap<CR>
+nnoremap <silent> [unite]r :<C-u>UniteResume<CR>
+nnoremap <silent> [unite]g :<C-u>Unite<Space>grep<CR>
 
 " open file with horizontal split
 " au FileType unite nnoremap <silent> <buffer> <expr> h unite#do_action('split')

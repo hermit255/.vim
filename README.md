@@ -4,7 +4,7 @@
   2. `cd ~/.vim`
   3. `sh setup.sh`
 ## NOTICE
-  - @win, you have to add `git` path to PATH to exec `call dein#install()`
+  - dein(the plugin to controll plugins) requires `git` and `python`
 
 ## OPTIONS
   - install ctags to use ctags plugin

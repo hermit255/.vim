@@ -8,9 +8,7 @@ nnoremap <Leader>l :tabnext<CR>
 nnoremap <Leader>h :tabprevious<CR>
 nnoremap <Leader>x :tabclose<CR>
 " reload
-nnoremap <Leader>r :e!<CR>
-" 検索方式を正規表現にする
-nnoremap / /\v
+nnoremap <Leader>R :e!<CR>
 " 行を改行なしでヤンクする
 nnoremap Y ^y$
 " * を押した時点でカーソルを動かさない(検索語をハイライトするだけ)
